@@ -1,0 +1,42 @@
+.page-body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: @black;
+}
+
+.wrapper {
+  width: 280px;
+  margin: 0 auto;
+  @media (min-width:@tablet-size) {
+      width: 700px;
+      margin: 0 auto;
+  }
+  @media (min-width:@desktop-size) {
+      width: 1180px;
+      margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.font-style(@font-size; @line-height; @font-weight) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}

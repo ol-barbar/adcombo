@@ -1,0 +1,119 @@
+.other-functions {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  @media (min-width: @desktop-size) {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.other-functions__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.other-functions__logo {
+  width: 81px;
+  height: 67px;
+  @media (min-width: @desktop-size) {
+    width: 129px;
+    height: 107px;
+  }
+}
+
+.other-functions__functions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (min-width: @desktop-size) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 129px;
+    height: 107px;
+  }
+}
+
+.other-functions__functions-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  &--image {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: fade(@purple, 10%);
+    overflow: visible;
+  }
+  &--text {
+    .font-style(12px; 12px; 700);
+    color: @purple;
+    margin: 0;
+  }
+  @media (min-width: @desktop-size) {
+    position: absolute;
+    max-width: 110px;
+    flex-direction: column;
+    // left: 20px;
+    // top: 20px;
+    // transform-origin: 100% 26px;
+    // transform: rotate(0deg);
+    &--text {
+      text-align: center;
+    }
+  }
+}
+
+.other-functions__functions-item:first-child {
+  @media (min-width: @desktop-size) {
+    // transform: rotate(-30deg);
+    top: -100px;
+    left: -50px;
+  }
+}
+
+.other-functions__functions-item:nth-child(2) {
+  @media (min-width: @desktop-size) {
+    top: -100px;
+    right: -50px;
+  }
+}
+
+.other-functions__functions-item:nth-child(3) {
+  @media (min-width: @desktop-size) {
+    // transform: rotate(-90deg);
+    top: 0px;
+    right: -120px;
+  }
+}
+
+.other-functions__functions-item:nth-child(4) {
+  @media (min-width: @desktop-size) {
+    // transform: rotate(-120deg);
+    top: 0px;
+    left: -120px;
+  }
+}
+
+.other-functions__functions-item:nth-child(5) {
+  @media (min-width: @desktop-size) {
+    // transform: rotate(-150deg);
+    bottom: -100px;
+    left: -50px;
+  }
+}
+
+.other-functions__functions-item:nth-child(6) {
+  @media (min-width: @desktop-size) {
+    // transform: rotate(-180deg);
+    bottom: -100px;
+    right: -50px;
+  }
+}

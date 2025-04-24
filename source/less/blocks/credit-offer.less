@@ -1,0 +1,240 @@
+.credit-offer {
+  padding: 0;
+  padding-bottom: 32px;
+}
+
+.credit-offer-title {
+  .font-style(20px; 20px; 700);
+  color: @black;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: fade(@purple, 20%);
+  }
+
+  @media (min-width: @desktop-size) {
+    .font-style(40px; 40px; 700);
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    &::after {
+      bottom: -20px;
+    }
+
+  }
+}
+
+.limited-offer__offers {
+  .swiper-wrapper {
+    width: auto;
+  }
+}
+
+.limited-offer__offers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @desktop-size) {
+    row-gap: 30px;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    padding: 15px 0;
+    width: auto;
+  }
+
+  .limited-offer__offers-item {
+    width: 260px;
+
+    @media (min-width: @tablet-size) {
+      width: 680px;
+    }
+
+    @media (min-width: @desktop-size) {
+      width: auto;
+    }
+  }
+}
+
+.limited-offer__offers-item {
+  position: relative;
+  background-color: @purple;
+  border-radius: 10px;
+  text-align: center;
+  padding: 16px 10px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  width: 260px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-size) {
+    margin-left: 20px;
+    padding: 15px 50px;
+  }
+
+  @media (min-width: @desktop-size) {
+    padding: 15px;
+    margin: 0;
+    min-width: 150px;
+    width: auto;
+    background-color: fade(@purple, 10%);
+    border: 2px solid @purple;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 11px;
+    flex-grow: 1;
+  }
+}
+
+.limited-offer__offers-times {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: -20px;
+  z-index: 2;
+  .font-style(14px; 14px; 700);
+  padding: 4px 7px;
+  margin: 0;
+  background-color: @yelow;
+  border-radius: 5px;
+
+  @media (min-width: @tablet-size) {
+    top: 18px;
+    left: -20px;
+  }
+
+  @media (min-width: @desktop-size) {
+    display: none;
+  }
+}
+
+.limited-offer__credit-amount {
+  .font-style(24px; 24px; 700);
+  color: @white;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+
+  &--designation {
+    .font-style(8px; 8px; 700);
+    vertical-align: middle;
+    color: @black;
+    background-color: @yelow;
+    padding: 4px;
+    border-radius: 50%;
+  }
+
+  @media (min-width: @desktop-size) {
+    color: @black;
+    text-align: center;
+
+    &--dollars {
+      display: none;
+    }
+  }
+}
+
+.limited-offer__item-button {
+  display: none;
+
+  @media (min-width: @desktop-size) {
+    display: block;
+    .font-style(16px; 16px; 500);
+    text-align: center;
+    padding: 17px 28px;
+    border: none;
+    border-radius: 5px;
+    background-color: @white;
+    color: fade(@black, 20%);
+    cursor: pointer;
+  }
+}
+
+.limited-offer__item-button:hover {
+  @media (min-width: @desktop-size) {
+    background-color: @yelow;
+    color: @black;
+  }
+}
+
+.limited-offer__offers-item:has(.limited-offer__item-button:hover ) {
+  @media (min-width: @desktop-size) {
+    background-color: @purple;
+  }
+}
+
+.limited-offer__credit-amount:has(+ .limited-offer__item-button:hover ) {
+  @media (min-width: @desktop-size) {
+    color: @white;
+  }
+}
+
+.limited-offer__slider-toggle-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  .swiper-pagination {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-size) {
+    display: none;
+  }
+}
+
+.swiper .swiper-pagination {
+  position: relative;
+  margin: 8px 0;
+  @media (min-width: @desktop-size) {
+    display: none;
+  }
+}
+
+.limited-offer__slider-toggle-button {
+  width: 7px;
+  height: 7px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background-color: fade(@yelow, 30%);
+  box-sizing: border-box;
+
+  &--active {
+    background-color: @yelow;
+  }
+}
+
+.limited-offer__button {
+  .font-style(16px; 16px; 700);
+  color: @black;
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0 15px;
+  background-color: @yelow;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  @media (min-width: @desktop-size) {
+    display: none;
+  }
+}

@@ -1,0 +1,53 @@
+.limited-offer__agreement-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  // @media (min-width: @tablet-size) {
+  //   top: 25px;
+  //   left: -30px;
+  // }
+}
+
+.limited-offer__agreement-checkbox--text {
+  .font-style(10px; 16px; 400);
+  position: relative;
+}
+
+.limited-offer__agreement-checkbox--checkbox + .limited-offer__agreement-checkbox--text::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid @purple;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.limited-offer__agreement-checkbox--checkbox:checked + .limited-offer__agreement-checkbox--text::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: @purple;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: 5px 7px;
+  background-size: 10px 6px;
+}
+
+.limited-offer__agreement-checkbox--link {
+  text-decoration: none;
+  color: @purple;
+}

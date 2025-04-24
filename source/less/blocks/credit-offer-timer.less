@@ -1,0 +1,35 @@
+.limited-offer__timer {
+    display: none;
+  @media (min-width: @desktop-size) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 13px;
+    border-radius: 10px;
+    background-color: @pink;
+  }
+}
+
+.limited-offer__timer-title {
+  .font-style(40px; 40px; 700);
+  color: @yelow;
+  margin: 0;
+  -webkit-text-stroke: 1px @white;
+    text-stroke: 1px @white;
+
+}
+
+.limited-offer__timer-comment {
+  .font-style(16px; 16px; 700);
+  color: @white;
+}
+
+.limited-offer__timer-timer {
+  .font-style(40px; 40px; 400);
+  color: @black;
+  background-color: @white;
+  margin: 0;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
